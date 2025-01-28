@@ -19,7 +19,7 @@ for poasition in range(word_length):
 print("Word to guess:" + place_holder)
 
 # Creating a while loop will loop over the guesses and check to see if there are true or not.
-# We are ececuting code incase the guess given in the input is true
+# We are executing code incase the guess given in the input is true.
 game_over = False 
 correct_letter = []
 
@@ -32,7 +32,9 @@ while not game_over:
         print(f"You have already guessed {guess}")
 
     display = " "
-
+    
+    # We create a for loop that checks every letter in the chosen word variable.
+    # If the letter is equal to the guess we display the letter and append it to the correct letter list.
     for letter in chosen_word:
         if letter == guess:
             display += letter 
@@ -45,7 +47,7 @@ while not game_over:
     
     print("Word to guess: " + display)
 
-    # Now we are exectuing code incase the guess given is not in the chosen_word variable
+    # Now we are exectuing code incase the guess given is not in the chosen_word variable.
     if guess not in chosen_word:
         lives -= 1
         print(f"You guessed {guess}, that is not in the word. You lose a life.")
@@ -62,3 +64,5 @@ while not game_over:
 
 
         print(stages[lives])
+
+        
